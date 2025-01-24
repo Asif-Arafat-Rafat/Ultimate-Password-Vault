@@ -1,0 +1,23 @@
+{
+    "name": "Ultimate Password Vault",
+    "description": "Tired of forgetting passwords or constantly resetting them? Ultimate Password Vault is your all-in-one solution for securely storing and managing your credentials with ease.\n\n✨ Key Features:\n✔ Secure Anywhere – Choose where to store your passwords: locally on your device or in your preferred cloud storage.\n✔ Multi-Layer Encryption – Your passwords are safeguarded with advanced encryption, ensuring top-tier security.\n✔ One Master Key – Access all your passwords with a single, secure password—no need to remember dozens of credentials.\n✔ Effortless Login – Say goodbye to \"Forgot Password\" struggles. Your credentials are always at your fingertips.\n\n🔒 Simple, Secure, and Stress-Free – Take control of your passwords with ease.",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "action":{
+        "default_popup": "form.html"
+    },
+    "icons":{
+        "16": "images/icon-16.png",
+        "32": "images/icon-32.png",
+        "48": "images/icon-48.png",
+        "128":"images/icon-128.png"
+    },
+    "content_scripts": [
+    {
+        "js": ["scripts/content.js"],
+        "matches": ["*://*/*"],
+        "run_at": "document_idle"
+    }
+]
+
+}
