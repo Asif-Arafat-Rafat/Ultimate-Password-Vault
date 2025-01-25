@@ -6,7 +6,10 @@
     "action":{
         "default_popup": "form.html"
     },
-    "permissions": ["tabs"],
+    "permissions": ["tabs","scripting","activeTab"],
+    "host_permissions": [
+        "*://*/*"
+    ],
     "background": {
         "service_worker": "scripts/background.js"
     },
