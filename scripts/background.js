@@ -6,7 +6,7 @@ chrome.tabs.onUpdated.addListener((tabid, changeInfo, tab) => {
     if(changeInfo.status==="complete"){
         console.log("Loading complete for tab:",tab.url);
         chrome.scripting.executeScript({
-            target: {tabId: tabid},
+            target: {tabId: tab.id},
             function: Inlogin
         }).then((result)=>{
             console.log("Result:",result[0].result);
